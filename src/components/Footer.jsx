@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-transparent border-t border-zinc-800/80 py-12 relative z-10 text-xs sm:text-sm">
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-12 space-y-6">
-        
+
         {/* Top Footer Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-5 pb-6 border-b border-zinc-800/80">
           <div className="flex items-center gap-3 text-center sm:text-left">
@@ -80,12 +80,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-zinc-500 font-medium text-xs sm:text-sm">
+        {/* <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-zinc-500 font-medium text-xs sm:text-sm">
           <p>© {new Date().getFullYear()} Gautam Singh Jadon. All rights reserved.</p>
           <p className="text-zinc-400">
             Crafted with Next.js & Helvetica Typography
           </p>
-        </div>
+        </div> */}
 
       </div>
     </footer>
