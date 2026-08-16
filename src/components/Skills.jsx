@@ -3,21 +3,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { categorizedSkills } from '../data/portfolioData';
-import { Code2, Database, Server, Wrench, Layers } from 'lucide-react';
+import { Code2, Database, Server, Shield, Plug, Cloud, Sparkles } from 'lucide-react';
 
 const categoryIcons = {
-  'Frontend': Code2,
-  'Backend & APIs': Server,
-  'Databases & Storage': Database,
-  'DevOps & Tools': Wrench,
-  'Languages & Protocols': Layers
+  'Frontend Architecture': Code2,
+  'Backend & Microservices': Server,
+  'Databases & ORMs': Database,
+  'Security & Authentication': Shield,
+  'Integrations & APIs': Plug,
+  'DevOps & Deployment': Cloud,
+  'AI & Intelligent Systems': Sparkles
 };
 
 export default function Skills() {
   return (
     <section id="skills" className="py-28 sm:py-36 bg-transparent text-zinc-100 relative">
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-12">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -39,7 +41,7 @@ export default function Skills() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {Object.entries(categorizedSkills).map(([cat, items], idx) => {
             const IconComponent = categoryIcons[cat] || Code2;
-            const isFeaturedCategory = cat === 'Frontend' || cat === 'Backend & APIs';
+            const isFeaturedCategory = cat === 'Frontend Architecture' || cat === 'Backend & Microservices';
 
             return (
               <motion.div
@@ -49,9 +51,8 @@ export default function Skills() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
                 whileHover={{ y: -3 }}
-                className={`vercel-card rounded-2xl p-6 sm:p-7 space-y-4 shadow-xl border border-zinc-800/80 hover:border-zinc-700/80 transition-all ${
-                  isFeaturedCategory ? 'md:col-span-1' : ''
-                }`}
+                className={`vercel-card rounded-2xl p-6 sm:p-7 space-y-4 shadow-xl border border-zinc-800/80 hover:border-zinc-700/80 transition-all ${isFeaturedCategory ? 'md:col-span-1' : ''
+                  }`}
               >
                 {/* Bento Card Header */}
                 <div className="flex items-center gap-3 pb-3 border-b border-zinc-800/80">

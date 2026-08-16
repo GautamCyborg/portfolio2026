@@ -137,7 +137,11 @@ export const categorizedSkills = {
   ],
   "DevOps & Deployment": [
     "Git & GitHub", "PM2 Process Manager", "IIS Reverse Proxy", "Windows Server", "CI/CD Pipelines"
-  ]
+  ],
+  "AI & Intelligent Systems": [
+    "RAG (Retrieval-Augmented Generation)", "LLM Integration", "Prompt Engineering",
+    "Embeddings & Vector Search", "Semantic Search", "OCR & Document Processing"
+  ],
 };
 
 export const education = [
